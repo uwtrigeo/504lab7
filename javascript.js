@@ -12,7 +12,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 var drawnItems = L.featureGroup().addTo(map);
 
 var tableData = L.layerGroup().addTo(map);
-var url = "https://178.128.228.240:4000/sql?q=";
+var url ="https://gisdb.xyz/sql?q=" //was previously "https://178.128.228.240:4000/sql?q=";
 // change the Query below by replacing lab_7_name with your table name
 var sqlQuery = "SELECT * FROM skier_info";
 function addPopup(feature, layer) {
