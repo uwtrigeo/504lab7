@@ -13,9 +13,11 @@ html, body {
 /* Text Box Overlay*/
 .textBoxStyle {
   padding:5px 10px;
+  bottom: 20px;
   background: rgba(0,0,0,0.5);
   color: #fff;
   font-size: 11px;
   line-height: 18px;
   border-radius: 5px;
+  
 }
