@@ -17,11 +17,11 @@ var url ="https://gisdb.xyz/sql?q=" //was previously "https://178.128.228.240:40
 var sqlQuery = "SELECT * FROM skier_info";
 function addPopup(feature, layer) {
     layer.bindPopup(
-        "<b>" + "Feature Name: " + " " + feature.properties.name + "</b><br>" +
-        "Feature description: " + feature.properties.description + "<br>" +
-        "User gge: " + feature.properties.age + "<br>" +
-        "User gender: " + feature.properties.gender + "<br>" +
-        "User traveled from: " + feature.properties.traveled_from
+        "<b>" + "User Name: " + " " + feature.properties.name + "</b><br>" +
+        "Feature Description: " + feature.properties.description + "<br>" +
+        "User Age: " + feature.properties.age + "<br>" +
+        "User Gender: " + feature.properties.gender + "<br>" +
+        "User Traveled From: " + feature.properties.traveled_from
 
     );
 }
@@ -52,11 +52,12 @@ new L.Control.Draw({
 function createFormPopup() {
     var popupContent = 
         '<form>' +
-        'Description:<br><input type="text" id="input_desc"><br>' +
-        'Age:<br><input type="text"id="input_age"><br>' +
-        'Gender:<br><input type="text" id="input_gender"><br>' +
-        'Traveled from:<br><input type="text" id="input_from"><br>' +
-        'User\'s Name:<br><input type="text" id="input_name"><br>' +
+        '<b>User\'s Name:<br><input type="text" id="input_name"></b><br>' +
+        'Feature Description:<br><input type="text" id="input_desc"><br>' +
+        'User Age:<br><input type="text"id="input_age"><br>' +
+        'User Gender:<br><input type="text" id="input_gender"><br>' +
+        'User Traveled from:<br><input type="text" id="input_from"><br>' +
+        
         '<input type="button" value="Submit" id="submit">' +
         '</form>'
     drawnItems.bindPopup(popupContent).openPopup();
